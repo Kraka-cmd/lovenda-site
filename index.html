@@ -3,81 +3,218 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lovenda | AI-acceptatietesten, Claude Code en development</title>
-  <meta name="description" content="Lovenda helpt softwareteams sneller en betrouwbaarder opleveren met AI-acceptatietesten, Claude Code-implementatie en development.">
+  <title>Lovenda | Development, AI-acceptatietesten en Claude Code</title>
+  <meta name="description" content="Lovenda bouwt features tegen een vaste prijs, test webapplicaties met AI en richt Claude Code in bij development-teams.">
+  <meta name="theme-color" content="#0d1117">
+  <meta property="og:title" content="Lovenda | Development, AI-acceptatietesten en Claude Code">
+  <meta property="og:description" content="Eerste feature tegen een vaste prijs, getest en via een pull request in je eigen repository.">
+  <meta property="og:url" content="https://lovenda.nl">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1117'/%3E%3Cpath d='M9 11l6 5-6 5' fill='none' stroke='%2334d399' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 22h7' stroke='%2334d399' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#main">Naar de inhoud</a>
+
   <header class="site">
-    <div class="wrap">
-      <a class="brand" href="./">Lovenda</a>
-      <nav>
+    <div class="wrap bar">
+      <a class="brand" href="./"><span class="prompt" aria-hidden="true">&gt;_</span> Lovenda</a>
+      <nav aria-label="Hoofdmenu">
         <a href="#diensten">Diensten</a>
         <a href="#werkwijze">Werkwijze</a>
-        <a href="#voorbeeld">Voorbeeld</a>
-        <a href="#contact">Contact</a>
+        <a href="#voorbeelden">Voorbeelden</a>
+        <a href="#vragen">Vragen</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main id="main">
     <section class="hero">
-      <h1>Sneller en betrouwbaarder software opleveren met Claude</h1>
-      <p>Ik ben full-stack developer en werk dagelijks met Claude Code. Ik test je applicatie, richt Claude Code in bij je team en bouw mee aan je product.</p>
-      <a class="btn" href="#contact">Neem contact op</a>
-      <a class="btn secondary" href="https://thelovenda.store/rapport/">Bekijk een voorbeeldrapport</a>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Full-stack development met Claude Code</p>
+          <h1>Je eerste feature tegen een <span class="hl">vaste prijs</span>, getest opgeleverd</h1>
+          <p class="lead">Ik bouw mee aan je product, test je webapplicatie scenario voor scenario en richt Claude Code in bij je team. Alles komt via een pull request in je eigen repository.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Vraag een vaste prijs aan</a>
+            <a class="btn ghost" href="https://thelovenda.store/rapport/">Bekijk een voorbeeldrapport</a>
+          </div>
+          <ul class="chips" aria-label="Technieken">
+            <li>Angular</li>
+            <li>TypeScript</li>
+            <li>Claude Code</li>
+            <li>Pull requests</li>
+          </ul>
+        </div>
+
+        <figure class="term" aria-label="Uitvoer van de testcyclus op de demo-webwinkel">
+          <div class="term-bar"><i></i><i></i><i></i><span>acceptatietest: thelovenda.store</span></div>
+          <pre><span class="c-dim">$</span> claude /acceptatietest
+<span class="c-ok">✓</span> T04 Product toevoegen werkt totaal bij
+<span class="c-ok">✓</span> T08 Code WELKOM10 geeft 10% korting
+<span class="c-bad">✗</span> T06 Negatief aantal wordt geweigerd  <span class="c-bad">D-02 hoog</span>
+<span class="c-bad">✗</span> T10 Kortingscode maar één keer      <span class="c-bad">D-01 hoog</span>
+<span class="c-bad">✗</span> T11 Gratis verzending bij € 50,00   <span class="c-warn">D-03 middel</span>
+<span class="c-dim">  … nog 7 scenario's</span>
+
+12 scenario's  <span class="c-ok">6 geslaagd</span>  <span class="c-bad">6 afgekeurd</span>
+<span class="c-dim">rapport →</span> <a href="https://thelovenda.store/rapport/">thelovenda.store/rapport</a></pre>
+          <figcaption>Echte uitkomst van de testcyclus op de demo-webwinkel.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <h2 id="diensten">Diensten</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>AI-acceptatietest</h3>
-        <p>Eén testcyclus op je webapplicatie. Je krijgt een samenvatting met advies voor de beslisser en een technisch defectrapport voor het team, ook als PDF.</p>
-        <p><strong>Vaste prijs, vanaf € 750 per cyclus.</strong></p>
-      </div>
-      <div class="card">
-        <h3>Claude Code-implementatie</h3>
-        <p>In twee tot vijf dagen richt ik Claude Code in je eigen repository in: projectinstructies, skills, permissies en een review- en testwerkwijze die je team zelf kan voortzetten.</p>
-        <p><a href="https://github.com/Kraka-cmd/claude-code-teamsetup">Bekijk een voorbeeldinrichting</a></p>
-        <p><strong>Per dag, prijs op aanvraag.</strong></p>
-      </div>
-      <div class="card">
-        <h3>Freelance development</h3>
-        <p>Full-stack development met Angular. De eerste feature bouw ik tegen een vaste prijs, getest en via een pull request in je eigen repository. Je ziet de kwaliteit voordat er een uurtarief ter sprake komt.</p>
-        <p><strong>Eerste feature tegen een vaste prijs, daarna € 70 per uur.</strong></p>
-      </div>
-    </div>
+    <section class="wrap" id="diensten">
+      <p class="eyebrow">Diensten</p>
+      <h2>Drie manieren om samen te werken</h2>
+      <div class="grid three">
+        <article class="card featured">
+          <span class="tag">Meest gevraagd</span>
+          <h3><span class="ico" aria-hidden="true">{ }</span> Freelance development</h3>
+          <p>Features, bugfixes en onderhoud in webapplicaties met Angular. De eerste feature bouw ik tegen een vaste prijs, zodat je de kwaliteit ziet voordat er een uurtarief ter sprake komt.</p>
+          <ul class="checks">
+            <li>Vaste prijs en acceptatiecriteria vooraf</li>
+            <li>Tests bij elke oplevering</li>
+            <li>Pull request in je eigen repository</li>
+          </ul>
+          <p class="price">Eerste feature vaste prijs <span>daarna € 70 per uur</span></p>
+        </article>
 
-    <h2 id="werkwijze">Werkwijze</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>1. Kennismaking</h3>
-        <p>Een gesprek van een half uur over je applicatie, je team en waar het nu knelt.</p>
-      </div>
-      <div class="card">
-        <h3>2. Testcyclus</h3>
-        <p>We spreken de scenario's af. Ik doorloop ze stap voor stap in je test- of acceptatieomgeving.</p>
-      </div>
-      <div class="card">
-        <h3>3. Rapport</h3>
-        <p>Je ontvangt de samenvatting en het defectrapport. In het rapport staat alleen wat is waargenomen.</p>
-      </div>
-      <div class="card">
-        <h3>4. Vervolg</h3>
-        <p>Je team lost de bevindingen zelf op, of ik doe dat. Daarna volgt een hertest van alle scenario's.</p>
-      </div>
-    </div>
+        <article class="card">
+          <h3><span class="ico" aria-hidden="true">✓</span> AI-acceptatietest</h3>
+          <p>Eén testcyclus op je webapplicatie, met scenario's die we vooraf afspreken. In het rapport staat alleen wat is waargenomen.</p>
+          <ul class="checks">
+            <li>Samenvatting met advies voor de beslisser</li>
+            <li>Technisch defectrapport voor het team</li>
+            <li>Beide ook als PDF</li>
+          </ul>
+          <p class="price">Vanaf € 750 <span>vaste prijs per cyclus</span></p>
+        </article>
 
-    <h2 id="voorbeeld">Voorbeeld</h2>
-    <p>Op <a href="https://thelovenda.store">thelovenda.store</a> staat een demo-webwinkel met zes bewust ingebouwde fouten, plus het rapport van de testcyclus die ze vond. Zo zie je vooraf wat je krijgt.</p>
-    <p><a class="btn secondary" href="https://thelovenda.store/rapport/">Naar het voorbeeldrapport</a></p>
+        <article class="card">
+          <h3><span class="ico" aria-hidden="true">&gt;_</span> Claude Code-implementatie</h3>
+          <p>In twee tot vijf dagen richt ik Claude Code in je eigen repository in, op een manier die je team zelf kan voortzetten.</p>
+          <ul class="checks">
+            <li>Projectinstructies en skills</li>
+            <li>Permissies: wat mag, wat na akkoord, wat nooit</li>
+            <li>Review- en testwerkwijze met overdracht</li>
+          </ul>
+          <p class="price">Per dag <span>prijs op aanvraag</span></p>
+        </article>
+      </div>
+    </section>
 
-    <h2 id="contact">Contact</h2>
-    <p>Mail naar <a href="mailto:info@lovenda.nl">info@lovenda.nl</a>. Vertel kort om welke applicatie het gaat, dan plan ik een kennismaking in.</p>
+    <section class="wrap" id="werkwijze">
+      <p class="eyebrow">Werkwijze</p>
+      <h2>Van eerste gesprek tot pull request</h2>
+      <ol class="steps">
+        <li>
+          <code>01 intake</code>
+          <h3>Kennismaking</h3>
+          <p>Een half uur over je applicatie, je team en wat er moet komen of waar het knelt.</p>
+        </li>
+        <li>
+          <code>02 offerte</code>
+          <h3>Afspraak op papier</h3>
+          <p>Je krijgt een vaste prijs met acceptatiecriteria en een lijst van wat er niet bij hoort.</p>
+        </li>
+        <li>
+          <code>03 branch</code>
+          <h3>Uitvoering</h3>
+          <p>Ik werk op een eigen branch of in je testomgeving. Halverwege krijg je een korte stand van zaken.</p>
+        </li>
+        <li>
+          <code>04 review</code>
+          <h3>Oplevering</h3>
+          <p>Een pull request of rapport met wat is gewijzigd, hoe het is getest en wat niet is gecontroleerd.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="wrap" id="voorbeelden">
+      <p class="eyebrow">Voorbeelden</p>
+      <h2>Bekijk het werk voordat je mailt</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Demo-webwinkel met zes fouten</h3>
+          <p>Een webwinkel met zes bewust ingebouwde fouten, plus het rapport van de testcyclus die ze alle zes vond. Probeer zelf of je ze vindt voordat je het rapport leest.</p>
+          <dl class="stats">
+            <div><dt>scenario's</dt><dd>12</dd></div>
+            <div><dt>bevindingen</dt><dd>6</dd></div>
+            <div><dt>ernst hoog</dt><dd>2</dd></div>
+          </dl>
+          <p class="links">
+            <a href="https://thelovenda.store">Naar de webwinkel</a>
+            <a href="https://thelovenda.store/rapport/">Naar het rapport</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Claude Code-teaminrichting</h3>
+          <p>Een openbare repository met projectinstructies, twee skills en permissies voor een voorbeeldproject. Kopieer wat past.</p>
+          <figure class="code">
+            <figcaption>.claude/settings.json</figcaption>
+            <pre><code>"permissions": {
+  "allow": ["Bash(npm run test *)"],
+  "ask":   ["Bash(git push *)"],
+  "deny":  ["Read(**/.env)"]
+}</code></pre>
+          </figure>
+          <p class="links">
+            <a href="https://github.com/Kraka-cmd/claude-code-teamsetup">Naar de repository</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="vragen">
+      <p class="eyebrow">Vragen</p>
+      <h2>Wat teams vooraf willen weten</h2>
+      <div class="faq">
+        <details>
+          <summary>Waar komt de code te staan?</summary>
+          <p>In je eigen repository, via een pull request. Je team kan alles reviewen voordat het wordt samengevoegd.</p>
+        </details>
+        <details>
+          <summary>Werk je met productiegegevens?</summary>
+          <p>Nee. Ik werk in een lokale, test- of acceptatieomgeving met testaccounts.</p>
+        </details>
+        <details>
+          <summary>Wat doet Claude en wat doe jij?</summary>
+          <p>Claude Code schrijft en test mee. Ik bepaal de aanpak, lees elke wijziging zelf na en ben verantwoordelijk voor wat ik oplever.</p>
+        </details>
+        <details>
+          <summary>Wat als ik tijdens het werk iets extra wil?</summary>
+          <p>Dat kan. Wensen buiten de afgesproken criteria doe ik op uurbasis, nadat je akkoord hebt gegeven.</p>
+        </details>
+        <details>
+          <summary>Welke feature is geschikt als eerste?</summary>
+          <p>Een feature van één tot vijf werkdagen, waarvan het gewenste gedrag in een paar zinnen te beschrijven is.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="cta">
+        <div>
+          <h2>Ligt er een feature die blijft liggen?</h2>
+          <p>Mail kort om welke applicatie het gaat en wat er moet komen. Dan plan ik een kennismaking in en maak ik een vaste prijs.</p>
+        </div>
+        <a class="btn" href="mailto:info@lovenda.nl?subject=Eerste%20feature%20tegen%20een%20vaste%20prijs">info@lovenda.nl</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site">
-    <div class="wrap">© 2026 Lovenda</div>
+    <div class="wrap bar">
+      <span>© 2026 Lovenda</span>
+      <span class="foot-links">
+        <a href="https://thelovenda.store">Demo</a>
+        <a href="https://github.com/Kraka-cmd">GitHub</a>
+        <a href="mailto:info@lovenda.nl">info@lovenda.nl</a>
+      </span>
+    </div>
   </footer>
 </body>
 </html>
