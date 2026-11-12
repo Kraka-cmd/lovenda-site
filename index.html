@@ -34,13 +34,14 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Full-Stack Development</p>
+          <p class="kicker"><span class="dot" aria-hidden="true"></span>Full-Stack Development</p>
           <h1>Je eerste feature tegen een <span class="hl">vaste prijs</span>, getest opgeleverd</h1>
           <p class="lead">Ik bouw mee aan je product, test je webapplicatie scenario voor scenario en richt Claude Code in bij je team. Alles komt via een pull request in je eigen repository.</p>
           <div class="actions">
             <a class="btn" href="#contact">Vraag een vaste prijs aan</a>
             <a class="btn ghost" href="https://thelovenda.store/rapport/">Bekijk een voorbeeldrapport</a>
           </div>
+          <p class="stack-label">Stack</p>
           <ul class="chips" aria-label="Technieken">
             <li>Angular</li>
             <li>TypeScript</li>
@@ -63,15 +64,26 @@
 <span class="c-dim">  … nog 7 scenario's</span>
 
 12 scenario's  <span class="c-ok">6 geslaagd</span>  <span class="c-bad">6 afgekeurd</span>
-<span class="c-dim">rapport →</span> <a href="https://thelovenda.store/rapport/">thelovenda.store/rapport</a></pre>
+<span class="c-dim">rapport →</span> <a href="https://thelovenda.store/rapport/">thelovenda.store/rapport</a>
+<span class="c-dim">$</span> <span class="cursor" aria-hidden="true"></span></pre>
           <figcaption>Echte uitkomst van de testcyclus op de demo-webwinkel.</figcaption>
         </figure>
       </div>
     </section>
 
+    <section class="trust" aria-label="Wat je altijd krijgt">
+      <ul class="wrap">
+        <li><b>Vaste prijs</b><span>Vooraf afgesproken, met acceptatiecriteria</span></li>
+        <li><b>Pull request</b><span>In je eigen repository, te reviewen door je team</span></li>
+        <li><b>Getest</b><span>Tests bij elke oplevering</span></li>
+        <li><b>Geen productiegegevens</b><span>Ik werk lokaal of in je testomgeving</span></li>
+      </ul>
+    </section>
+
     <section class="wrap" id="diensten">
       <p class="eyebrow">Diensten</p>
       <h2>Drie manieren om samen te werken</h2>
+      <p class="section-lead">Begin klein, met één feature of één testcyclus. Je weet vooraf wat je krijgt en wat het kost.</p>
       <div class="grid three">
         <article class="card featured">
           <span class="tag">Meest gevraagd</span>
@@ -109,9 +121,11 @@
       </div>
     </section>
 
-    <section class="wrap" id="werkwijze">
+    <section class="band" id="werkwijze">
+      <div class="wrap">
       <p class="eyebrow">Werkwijze</p>
       <h2>Van eerste gesprek tot pull request</h2>
+      <p class="section-lead">Vier stappen, met bij elke stap iets dat je kunt controleren.</p>
       <ol class="steps">
         <li>
           <code>01 intake</code>
@@ -134,11 +148,13 @@
           <p>Een pull request of rapport met wat is gewijzigd, hoe het is getest en wat niet is gecontroleerd.</p>
         </li>
       </ol>
+      </div>
     </section>
 
     <section class="wrap" id="voorbeelden">
       <p class="eyebrow">Voorbeelden</p>
       <h2>Bekijk het werk voordat je mailt</h2>
+      <p class="section-lead">Twee voorbeelden die je zelf kunt openen en nalopen.</p>
       <div class="grid two">
         <article class="card">
           <h3>Demo-webwinkel met zes fouten</h3>
@@ -220,5 +236,16 @@
       </span>
     </div>
   </footer>
+  <script>
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js');
+      const io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll('.card, .steps li, .faq details, .cta, .trust li').forEach((el, i) => {
+        el.classList.add('reveal'); el.style.transitionDelay = (i % 4) * 60 + 'ms'; io.observe(el);
+      });
+    }
+  </script>
 </body>
 </html>
